@@ -1,7 +1,7 @@
 title: About
-header: Homepage of Evan Chen
+header: Page personnelle d'Amar Ahmane
 menu-position: 0
-description: Homepage of Evan Chen. Course notes, olympiad materials, writings, CV.
+description: Page personnelle d'Amar Ahmane, étudiant en mathématiques. Cette page contient des notes de cours, des compilations d'exercices, des maths écrites par moi-même, et bien d'autres choses !
 
 ---
 
@@ -10,8 +10,6 @@ description: Homepage of Evan Chen. Course notes, olympiad materials, writings, 
 <img src="https://web.evanchen.cc/static/top-self.jpg" width="180"/>
 </a>
 </span>
-
-_信言不美，美言不信。_
 
 This is the homepage of Evan Chen (陳誼廷),
 known also as `vEnhance` on many websites.

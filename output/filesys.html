@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Evan Chen &bullet; Filesys concepts</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,700;1,400&family=Mate&family=Noto+Serif+TC:wght@500&family=PT+Sans&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript">
+		MathJax = {
+			tex: {
+				inlineMath: [
+					['$', '$']
+				],
+				displayMath: [
+					['\\[', '\\]']
+				],
+			}
+		};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+	</script>
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="evan chen, math, olympiad, IMO, education">
+<meta description="Evan Chen | Filesys concepts">
+	<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/icons/manifest.json">
+	<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/icons/favicon.ico">
+	<meta name="msapplication-config" content="icons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<link type="text/css" rel="stylesheet" href="/css/simple-53544.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-12">
+				<div id="header"><a href="/">
+						<h1 id="sitetitle">
+							Evan Chen《陳誼廷》
+							<img height="54" src="/icons/android-chrome-192x192.png" style="vertical-align: text-bottom;" alt="Logo">
+						</h1>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-10 col-md-7">
+				<div id="latest_blog" class="badge px-2 pt-2 pb-1 mx-0 mt-1 mb-0">
+					<a id="latest_blog_anchor"></a>
+					<span class="badge bg-success" id="latest_blog_date"></span>
+				</div>
+			</div>
+			<div class="col-10 col-md-5 col-lg-5">
+				<div id="email_box">
+					<a class="emoji-link" href="/contact.html">
+						<img height="24" src="/icons/social-mail.png" alt="Email" />
+					</a>
+					&nbsp;
+					<a class="emoji-link" href="https://blog.evanchen.cc/">
+						<img height="24" src="/icons/social-wordpress.png" alt="Blog" />
+					</a>
+					&nbsp;
+					<a class="emoji-link" href="https://www.instagram.com/evanchen.cc/">
+						<img height="24" src="/icons/social-instagram.png" alt="Instagram" />
+					</a>
+					&nbsp;
+					<a class="emoji-link" href="https://youtube.com/c/vEnhance">
+						<img height="24" src="/icons/social-youtube.png" alt="YouTube" />
+					</a>
+					&nbsp;
+					<a class="emoji-link" href="https://twitch.tv/vEnhance">
+						<img height="24" src="/icons/social-twitch.png" alt="Twitch" />
+					</a>
+					&nbsp;
+					<a class="emoji-link" href="/discord.html">
+						<img height="24" src="/icons/social-discord.png" alt="Discord" />
+					</a>
+					&nbsp;
+					<a class="emoji-link" href="https://www.github.com/vEnhance/">
+						<img height="24" src="/icons/social-github.png" alt="Github" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<div id="content" class="row">
+			<div class="col-12 col-md-3 order-md-last pl-md-1">
+				<div id="side">
+					<nav class="navbar-light d-md-none navbar">
+						<div class="navbar-brand" id="navtitle">
+							<code>web.evanchen.cc</code>
+						</div>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsedContent" aria-controls="collapsedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-light navbar-toggler-icon"></span>
+						</button>
+					</nav>
+					<div class="collapse d-md-block" id="collapsedContent">
+						<h4><a href="/index.html">About</a></h4>
+<h5>&nbsp; &bullet; &nbsp;<a href="/upload/public-CV.pdf">CV</a></h5>
+<h4><a href="/otis.html">Teaching (OTIS)</a></h4>
+<h4><a href="/olympiad.html">Olympiad</a></h4>
+<h5>&nbsp; &bullet; &nbsp;<a href="/wherestart.html">For beginners</a></h5>
+<h5>&nbsp; &bullet; &nbsp;<a href="/problems.html">Problems</a></h5>
+<h5>&nbsp; &bullet; &nbsp;<a href="/mop.html">MOP</a></h5>
+<h5>&nbsp; &bullet; &nbsp;<a href="/elmo/index.html">ELMO</a></h5>
+<h5>&nbsp; &bullet; &nbsp;<a href="/usemo.html">USEMO</a></h5>
+<h4><a href="/personal.html">Personal/Hobbies</a></h4>
+<h5>&nbsp; &bullet; &nbsp;<a href="/puzzlehunt.html">Puzzle hunts</a></h5>
+<h5>&nbsp; &bullet; &nbsp;<a href="/games.html">Games</a></h5>
+<h5>&nbsp; &bullet; &nbsp;<a href="/photos.html">Photos</a></h5>
+<h4><a href="/videos.html">YouTube/Twitch</a></h4>
+<h5>&nbsp; &bullet; &nbsp;<a href="/discord.html">Discord</a></h5>
+<h4><a href="/techspeech.html">plz learn code</a></h4>
+<h5>&nbsp; &bullet; &nbsp;<strong>Filesys concepts</strong></h5>
+<h5>&nbsp; &bullet; &nbsp;<a href="/techsupport.html">Learning path</a></h5>
+<h5>&nbsp; &bullet; &nbsp;<a href="/latex-style-guide.html">LaTeX style</a></h5>
+<h4><a href="/publications.html">Publications</a></h4>
+<h5>&nbsp; &bullet; &nbsp;<a href="/geombook.html">EGMO book</a></h5>
+<h5>&nbsp; &bullet; &nbsp;<a href="/napkin.html">Napkin (v1.5)</a></h5>
+<h5>&nbsp; &bullet; &nbsp;<a href="/coursework.html">Course notes</a></h5>
+<h4><a href="/recommend.html">Recommendations</a></h4>
+<h5>&nbsp; &bullet; &nbsp;<a href="/mentors.html">Mentors</a></h5>
+<h5>&nbsp; &bullet; &nbsp;<a href="/quotes.html">Quotes</a></h5>
+<h5>&nbsp; &bullet; &nbsp;<a href="/faqs.html">FAQs</a></h5>
+<h4><a href="/contact.html">Contact</a></h4>
+<h5>&nbsp; &bullet; &nbsp;<a href="/letters.html">Rec letters</a></h5>
+						<br />
+						<p>
+							<a href='https://ko-fi.com/evanchen' target='_blank'>
+								<img height='28' style='border:0px;height:28px;' src='//az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-9 order-md-first pr-md-2">
+				<div id="main">
+					<div class="entry">
+						<h1 id="pagetitle"><a href="/filesys.html">File systems: Concepts for beginners</a></h1>
+						<div class="entrywrap">
+							<h2><a id="intro"></a>Introduction (can be skipped)<a href="#intro" class="hash-link">#</a></h2>
+<p>This explains at a high level the most basic types of objects<sup id="fnref:0"><a class="footnote-ref" href="#fn:0">1</a></sup>
+that any computer system will have.
+It is meant to be a short briefing before you follow the instructions in the
+<a href="/techsupport.html">learning path</a> page.</p>
+<h2><a id="topics"></a>Topics covered<a href="#topics" class="hash-link">#</a></h2>
+<p>In the last 10 years, the ways users access files have changed dramatically.
+For many students, even the concept of a &ldquo;file&rdquo; could be
+challenging now, let alone an editor or compiler.</p>
+<p>The goal for this post is to try and sort out some common conceptions.
+It&rsquo;s attempting to write out what are some common confusions about different
+<em>types</em> of objects in computing world, and draw analogies to the real world.</p>
+<p>Specifically, I want to talk about five kinds of things:</p>
+<ul>
+<li>Folders and files</li>
+<li>Editors</li>
+<li>Compilers / interpreter</li>
+<li>Terminal emulators</li>
+<li>Executing programs</li>
+</ul>
+<h2><a id="core"></a>Core concepts<a href="#core" class="hash-link">#</a></h2>
+<h3><a id="folders"></a>Folders<a href="#folders" class="hash-link">#</a></h3>
+<p>A <strong>folder</strong> is what it sounds like.
+It hosts several items, each of which may be a file or a folder.
+For analogy, <strong>you can think of a folder as a huge building</strong>,
+so big that there are smaller rooms inside it (sub-folders).</p>
+<p>Every folder is itself contained inside some folder.<sup id="fnref:mac"><a class="footnote-ref" href="#fn:mac">2</a></sup>
+Well, except for a few top-level folders varying by system,
+but you don&rsquo;t have to worry about ever interacting with that directly.</p>
+<p><strong>Folders are important because they help you organize files.</strong>
+Actually.
+You should think of the &ldquo;Downloads&rdquo; or &ldquo;Desktop&rdquo; folder as
+a physical desk.
+It&rsquo;s fine to leave some papers on your desk if you are only going to need them
+for a short while. What you should <em>not</em> do is end up with 2 gigabytes of
+unrelated stuff in your Downloads folder having no clue how to find anything.
+That would be like throwing all your laundry in a
+pile on the floor without even bothering to separate clean from dirty clothes.</p>
+<h3><a id="files"></a>Files<a href="#files" class="hash-link">#</a></h3>
+<p>A <strong>file</strong> is a piece of data; officially, a sequence of characters.
+The characters are officially 0&rsquo;s and 1&rsquo;s,
+but most often they&rsquo;re grouped into sets of eight bits called &ldquo;bytes&rdquo;
+that map onto a set of printable characters
+(01100001=97=A, 98=B, &hellip;).
+Files are stored in folders.</p>
+<h3><a id="plaintext"></a>Plain text files<a href="#plaintext" class="hash-link">#</a></h3>
+<p>The simplest kind of file is a <strong>text file</strong> or <strong>plain text file</strong>,
+in which the data simply spells out text.
+For example if you had a file called <code>hello.txt</code>,
+and its contents consisted of the 12 bytes &ldquo;I am so cool&rdquo;,
+that would be a plain text file.
+Other examples:</p>
+<ul>
+<li>The source code for most programming languages is input in plain text format,
+  such as in C++, Python, Go, Java, Lisp, etc. I actually can&rsquo;t think of a
+  single example of a real programming language whose source codes are not in
+  plain text format.</li>
+<li>LaTeX source files are in plain text too.</li>
+<li>This document being in Markdown is written in plain text format.</li>
+<li>HTML is considered plain text too. It may not be particularly <em>intuitive</em>
+  plain text with <code>&lt;div&gt;</code> and <code>&lt;/span&gt;</code> everywhere,
+  but the encoding is at least human-comprehensible output.</li>
+<li>Most configuration files like <code>*.yaml</code>, <code>*.cfg</code>, <code>*.rc</code> are
+  usually in plain text format.</li>
+<li><code>*.txt</code> too I suppose :)</li>
+</ul>
+<p>Files often have extensions like <code>*.py</code>, <code>*.tex</code>, <code>*.txt</code>. These are
+meant to be hints for the operating system on what kind of file they are, but
+they don&rsquo;t technically need to be there.<sup id="fnref:win"><a class="footnote-ref" href="#fn:win">3</a></sup></p>
+<p>There are <em>counterexamples</em>, of course &mdash; mainly for programs that use
+their own encoding system, rather than standard A=97, B=98, &hellip;</p>
+<ul>
+<li>Microsoft Word is one example, those documents use their own encoding that
+  doesn&rsquo;t make sense to the uninformed, so only Word can really edit it.
+  (It&rsquo;s sort of like, you live in an English-speaking country,
+  but Microsoft Word will only read/write documents in Ishkashimi language,
+  thus forcing you to keep using Microsoft Word.)</li>
+<li>PDF also uses its own compressed format.</li>
+<li>And of course, <code>*.tar.gz</code> or <code>*.zip</code> archive files use a different
+  encoding to achieve compression that isn&rsquo;t possible with plain text.</li>
+</ul>
+<p>But bottom line: <strong>you can think of a file like a piece of paper.</strong>
+Which brings us to&hellip;</p>
+<h3><a id="editors"></a>Editors<a href="#editors" class="hash-link">#</a></h3>
+<p>An <strong>editor</strong> is any program that manipulates the contents of a text file.
+In other words, an <strong>editor is like a pencil/eraser/pen</strong>:
+given a piece of paper, you can append, alter, or delete contents.</p>
+<p>Because the most common file is a plain text file,
+the most common editor is a <strong>text editor</strong>.
+That&rsquo;s an editor that understand plain text files,
+and can manipulate them in natural ways.
+The beauty of this is the following principle,
+which you must understand.</p>
+<blockquote>
+<p><strong>Important Principle: ANY text editor can edit ANY plain text file</strong>.</p>
+</blockquote>
+<p>For example, I am a die-hard user of
+<a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">Vim</a>.
+(But I don&rsquo;t recommend Vim for beginners unless you like trial by fire.)
+Others swear by <a href="https://en.wikipedia.org/wiki/Visual_Studio_Code">VS Code</a>,
+and still others by <a href="https://en.wikipedia.org/wiki/Emacs">Emacs</a>.
+There are simpler beginner editors too;
+some are listed in <a href="/techsupport.html#editors">the learning path</a>.</p>
+<p>But the thing you need to understand is that choosing an editor does NOT
+rely on what <em>kind</em> of file you are editing, as long as it&rsquo;s plain text.
+If you love Vim like me, you can use Vim for Python, for LaTeX, for C++, for
+Markdown, whatever you like. You do not need a different editor per file type.</p>
+<h3><a id="compile"></a>Compilers and interpreters<a href="#compile" class="hash-link">#</a></h3>
+<p>Compilers and interpreters are programs that take files as input and do something with them.
+Maybe they make a copy in a different form, or execute some commands, or so on.</p>
+<p><strong>You can think of a compiler or interpreter as a person
+who accepts instructions in writing.</strong></p>
+<p>For example, consider Monty Python, your friendly Python interpreter.
+Suppose you give Monty a piece of paper called <code>beer.py</code> as follows:</p>
+<pre><code class="language-python">n = 100
+while n &gt;= 0:
+  print(f&quot;{n} bottles of beer on the wall, {n} bottles of beer!&quot;)
+  print(f&quot;Take it down, pass it around, {n-1} bottles of beer on the wall&quot;)
+  n -= 1
+</code></pre>
+<p>Monty will read these instructions, and happily begin singing
+one of the most obnoxious car songs of all time.</p>
+<p>As another example, Leslie LaTeX is a friendly LaTeX interpreter.
+You write a file called <code>nt.tex</code> as follows:</p>
+<pre><code class="language-latex">\documentclass[12pt]{scrartcl}
+\title{A number theory problem}
+\author{Evan Chen}
+\date{November 16, 2021}
+
+\begin{document}
+\maketitle
+Let $\theta$ be a real number such that
+$\cos(20\theta)$ and $\cos(21\theta)$
+are rational numbers.
+Is $\cos(\theta)$ necessarily rational?
+\end{document}
+</code></pre>
+<p>If you give this to Leslie, she&rsquo;ll look through for a bit
+and then produce a beautifully typeset PDF file for you
+that you can give to torment your math teacher. Wonderful!</p>
+<p>The thing I need to hammer home now is that:</p>
+<blockquote>
+<p><strong>Important Principle: the compiler or interpreter
+neither knows nor cares what editor was used.</strong></p>
+</blockquote>
+<p>It&rsquo;s none of the interpreter&rsquo;s business how you prepare your documents. You can
+write in pencil, or fountain pen, or crayon, or sharpie, or art brush, and the
+interpreter is only there to read the instructions and fulfill their job.</p>
+<h2><a id="invoke"></a>Invoking the tools<a href="#invoke" class="hash-link">#</a></h2>
+<h3><a id="cmd"></a>The Command Line<a href="#cmd" class="hash-link">#</a></h3>
+<p>A <strong>terminal</strong> is a text-based interface for issuing commands to a
+computer.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">4</a></sup> As a trivial example, if you have a file called <code>gossip.txt</code>,
+you can run <code>vim gossip.txt</code> to read the latest hot tea, in Vim.</p>
+<p>For simplicity, we&rsquo;re going to use <strong>Bash</strong> as the name of the commander,
+though others exist.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">5</a></sup> In general, Linux prompts may look different depending
+on what terminal emulator or shell you use, but it should be easily accessible.
+Windows may be more complicated.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">6</a></sup></p>
+<p>You can think of <strong>Bash as a commanding officer</strong>.
+It is able to run all other programs.
+However, Bash has to travel from folder to folder.
+At any point, Bash is stationed at a certain folder,
+which is called its <strong>current directory</strong>.
+Bash can travel to different directories using the <code>cd</code> command,
+which you can <a href="https://www.redhat.com/sysadmin/navigating-filesystem-linux-terminal">read about literally anywhere</a>.
+(Pro-tip: the faster you learn tab-completion, the better.)</p>
+<p>Moreover, bash can then issue commands like <code>vim gossip.txt</code>.
+But there are some catches.</p>
+<ol>
+<li>First, Bash looks around for a file called <code>gossip.txt</code>
+   in the folder that Bash happens to be in.
+   If it sees <code>gossip.txt</code> in the current folder.
+   If it&rsquo;s there, it picks up that piece of paper.</li>
+<li>Then, Bash looks for a command called <code>vim</code>.
+   There is a Vim editor on the system so Bash radios Vim to come
+   over and read the <code>gossip.txt</code> document.</li>
+<li>Vim does its thing.</li>
+</ol>
+<p>The argument can be a filename in the current directory,
+or a path to one.
+So for example, <code>vim secretbox/gossip.tex</code> does the same thing
+as <code>cd secretbox/</code> plus <code>vim gossip.tex</code>.</p>
+<p>The orders and space arguments matters.
+The first word is almost always a verb,
+and everything that comes after it is an argument.
+This could be the name of a file as in our example,
+or it could be some other flag or parameter.
+This is one reason we avoid spaces in filenames,
+because it mucks all these commands up, requiring quotes.</p>
+<h2><a id="exec"></a>Execution<a href="#exec" class="hash-link">#</a></h2>
+<h3><a id="progfile"></a>Programs are secretly executable files<a href="#progfile" class="hash-link">#</a></h3>
+<p>(Skip this entire section if you are learning this for the first time.)</p>
+<p>Small surprise: editors like Vim or compilers like LaTeX
+are all <em>technically</em> actually files too,
+even though we don&rsquo;t typically think of them that way.
+For one thing, they are meant to be executed rather than edited.
+Hence, they usually don&rsquo;t happen to have plain text encoding,
+because they&rsquo;re meant to be read by machines, not you
+(and in particular they are not meant to be editable).
+In other words, they&rsquo;re written in &ldquo;machine code&rdquo;, run by your system.</p>
+<p>Vim isn&rsquo;t the only program.
+Even most basic commands used in regular terminal sessions,
+like <code>cd</code> (change directory), <code>pwd</code> (print working directory),
+<code>rm</code> (deletes a file), etc. are actually all executable files.
+As is <code>firefox</code>, which launches a Firefox process.</p>
+<p>How can you tell these apart?
+This is a bit out of scope, but on Linux,
+every file has a set of <a href="https://en.wikipedia.org/wiki/File-system_permissions#Permissions">permission bits</a>,
+and all you need to know the third bit indicates the file is <em>executable</em>.</p>
+<p>So if someone types <code>vim gossip.txt</code>, that means <code>vim</code> is the &ldquo;verb&rdquo;,
+(the executable file being run), so Bash will give <code>vim</code> all the arguments
+(in this case <code>gossip.txt</code>) and let Vim do its thing.</p>
+<p>In which case you might ask: how does Bash know where to find <code>vim</code>,
+if it&rsquo;s also a file but not in the current directory?
+The way it works is that computers have a variable called <code>$PATH</code>
+that specifies a list of directories.
+Bash will look around every folder listed in <code>$PATH</code>
+for an executable file which matches the same name; it takes the first one.
+On Linux, the <code>$PATH</code> variable is managed well,
+and unless you have something extra you need you can leave it alone.
+If you&rsquo;re on Windows, HAHAHAHA GOOD LUCK.</p>
+<p>To summarize: some files are executables,
+and every incantation should start with the name of an executable.
+The executables could live in a faraway system directory,
+but Bash is smart enough to look for them in <code>$PATH</code>.</p>
+<h3><a id="manyprog"></a>Hence there are lots of programs<a href="#manyprog" class="hash-link">#</a></h3>
+<p>Earlier, I talked about compilers and interpreters
+as programs that read a piece of paper and do some action.
+But programs are really versatile.</p>
+<p>Once executed, programs can actually do more than one thing.
+For example, they can read or write from <em>multiple</em> files, not just one.
+Or they can find the files themselves.
+Or they may not need files as input: <code>firefox</code> is a program that,
+when executed, launches a web browser.</p>
+<p>There are also a lot of <em>suite-like</em> programs for a specific kind of file.
+You can think of this as a Swiss army knife.
+If you are writing LaTeX,
+you might have a program like TeXWorks which is both a text editor
+(lets you edit <code>main.tex</code>) but also has a button that
+invokes the LaTeX compiler (like a play button).</p>
+<p>Using such suites is fine especially as a beginner.
+Just be aware that the suite is hiding from you that two unrelated process,
+the editing and the compiling, are happening.
+This will help you when/if you need to debug an issue.</p>
+<h2><a id="next"></a>Where next?<a href="#next" class="hash-link">#</a></h2>
+<p>If you&rsquo;re ready to start playing with code,
+<a href="/techsupport.html">check out the tech support page</a>.</p>
+<p>Thanks to the following individuals for suggestions and corrections:</p>
+<ul>
+<li>Ankan Bhattacharya</li>
+<li>David Altizio</li>
+<li>Luke Robitaille</li>
+</ul>
+<p>I also acknowledge that some oversimplifications were made here.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:0">
+<p>To draw an analogy, imagine a friendly alien visiting Earth for first time.
+The tour guide might start by pointing out the big ball of fire in the sky
+and explain that it&rsquo;s the sun, where the Earth gets warmth and light.
+They might even go on to say the sun only works 12 hours per 24 hours,
+and each sun-revolution is called a day.
+Then they&rsquo;ll explain there are things called trees, and stuff called plants,
+some of which can be eaten for food, but which also provide critical oxygen.
+Of course, none of this is remotely enough data
+for the alien to settle in and live a life on Earth,
+but it sure is helpful as a start.&#160;<a class="footnote-backref" href="#fnref:0" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:mac">
+<p>Apparently, Finder on OSX hides the home folder. Go figure.&#160;<a class="footnote-backref" href="#fnref:mac" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:win">
+<p>For <em>Windows</em> users, you should be aware
+Windows not only hides file extensions by default from you,
+but also tries to intimidate you when you do try to change extensions,
+e.g. &ldquo;OMG changing the file extension might make the file unusable!!!&rdquo;
+You can ignore this, because the file extension is just part of the file name
+that&rsquo;s customary (but not essential) in helping determine what kind of file is used.
+But it&rsquo;s better for learning to see the extensions, anyhow.&#160;<a class="footnote-backref" href="#fnref:win" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:1">
+<p>Some terminology confusion these days as &ldquo;terminal&rdquo;, &ldquo;terminal emulator&rdquo;,
+&ldquo;shell&rdquo;, etc. are all interchangeable.
+See <a href="https://unix.stackexchange.com/a/254366">unix.SE</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Allegiances: I use <code>xfce4-terminal</code> as the wrapper around my terminal, and
+I use <code>fish</code> for the shell instead of the more standard <code>bash</code>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>That&rsquo;s because the shell is deliberately hidden
+from the user, leaving lots of confusion between things like Git Bash versus
+Powershell vs Windows Subsystem Linux versus MinGW or whatever.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+						</div>
+					</div>
+					<div>
+						<p><div><a href="https://github.com/vEnhance/web.evanchen.cc">Source repository (git)</a> &bullet; <a href="https://github.com/vEnhance/web.evanchen.cc/commits/main/input/filesys.md">Revision history</a> &bullet; <a href="https://github.com/vEnhance/web.evanchen.cc/edit/main/input/filesys.md">Suggest edit</a></div><div class="text-muted">Updated Sun 14 May 2023, 15:55:31 UTC by <a href="https://github.com/vEnhance/web.evanchen.cc/commit/ebb954208d28367b52e51c55d5593bdfbf897ab6"><code>ebb954208d28</code></a></div></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- end container -->
+
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-71669828-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<script>
+		var ks = [];
+		document.addEventListener('keydown', function(e) {
+			ks.push(e.keyCode);
+			if (ks.length > 10) {
+				ks.splice(0, ks.length - 10);
+			}
+			if (ks.length < 10) return;
+			if (ks[0] != ks[1]) return;
+			if (ks[2] != ks[3]) return;
+			if (ks[4] != ks[6]) return;
+			if (ks[5] != ks[7]) return;
+			var a, b, d, l, r, u;
+			a = ks[9];
+			b = ks[8];
+			d = ks[2];
+			l = ks[4];
+			r = ks[5];
+			u = ks[0];
+			if (a * a + b * b * b + d * d * d * d != 2851721) return;
+			if (l * l + r * r * r + u * u * u * u != 2145824) return;
+			var s = String.fromCharCode(a + 7) +
+				String.fromCharCode(b + 3) +
+				String.fromCharCode(d + 42) +
+				String.fromCharCode(l + 42) +
+				String.fromCharCode(r + 30) +
+				String.fromCharCode(u + 45);
+			document.location = '//web.evanchen.cc/' + s.toLowerCase() + '.html';
+		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			const url = 'https://blog.evanchen.cc/feed/';
+			$.ajax({
+				type: 'GET',
+				dataType: 'jsonp',
+				url: "https://api.rss2json.com/v1/api.json?rss_url=" + url,
+				success: function(data) {
+					const pub_date = data.items[0].pubDate;
+					const title = data.items[0].title;
+					const link = data.items[0].link;
+					const cut_title = title.length < 45 ? title : title.substring(0, 45) + '…';
+					$("#latest_blog_date").html(pub_date.substring(0, 10));
+					$("#latest_blog_anchor").prop('href', link);
+					$("#latest_blog_anchor").html(cut_title);
+				}
+			});
+		});
+	</script>
+</body>
+</html>
