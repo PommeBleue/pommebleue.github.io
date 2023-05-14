@@ -1,8 +1,3 @@
-# web.evanchen.cc
+# pommebleue.github.io
 
-These are source files for my site
-[web.evanchen.cc](https://web.evanchen.cc).
-Not all assets included, just base content.
-
-The website is generated with
-[Poole](https://hg.sr.ht/~obensonne/poole).
+Source files for my [personal page](https://pommebleue.github.io).
