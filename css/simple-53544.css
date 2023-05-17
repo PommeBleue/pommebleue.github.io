@@ -161,7 +161,7 @@ h6 {
   border-radius: 2px;
   -moz-outline-radius: 2px;
   -webkit-border-radius: 2px;
-  background-color: #f2fffa; 
+  background-color: #f2ece4; 
   margin-top: 12px;
   margin-left: 0px;
 }
@@ -218,9 +218,9 @@ h6 {
 /* Navigation (à droite) */
 #side {
   border: 1px solid #6a5acd;
-  border-radius: 11px;
-  -moz-border-radius: 11px;
-  -webkit-border-radius: 11px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -296,7 +296,7 @@ div.entry {
   padding-bottom: 16px;
 }
 div.entrywrap {
-  background-color: #dedede;
+  background-color: #ffffff;
   border: 1px solid black;
   margin: 8px;
   overflow: auto;
