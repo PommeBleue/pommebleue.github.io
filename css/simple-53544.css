@@ -35,7 +35,7 @@ SOFTWARE.
 
 body {
   font-family: "Mate", serif;
-  background-color: #f6f6f6; /* It's #5368C1 on KARL */
+  background-color: #ececec; /* It's #5368C1 on KARL */
   color: #121212;
   max-width: 800px; /* Don't overwhelm large displays */
   margin: 0 auto;
@@ -70,13 +70,13 @@ a:visited {
 }
 a:hover {
   color: #006b57;
-  text-shadow: 0 0 5px #ff0;
+  text-shadow: 0 0 5px #321558;
   text-decoration: underline;
 }
 
 h1 a:link,
 h1 a:visited {
-  color: #3333ff;
+  color: #3333ff94;
 }
 h2 a:link,
 h2 a:visited {
@@ -280,11 +280,6 @@ h6 {
   margin-left: 10px;
   margin-right: 10px;
   float: left;
-}
-
-#latest_blog {
-  background-color: #abdeab;
-  font-family: "PT Sans", sans-serif;
 }
 
 /* ENTRY AND ENTRY WRAP */
