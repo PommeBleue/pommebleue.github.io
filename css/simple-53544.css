@@ -157,11 +157,11 @@ h6 {
 
 #main {
   padding: 5px;
-  border: 1px solid #2e8b57;
-  border-radius: 11px;
-  moz-border-radius: 11px;
-  -webkit-border-radius: 11px;
-  background-color: #b2fee1; /* light green color */
+  border: 1px solid #050e25;
+  border-radius: 2px;
+  -moz-outline-radius: 2px;
+  -webkit-border-radius: 2px;
+  background-color: #f2fffa; 
   margin-top: 12px;
   margin-left: 0px;
 }
