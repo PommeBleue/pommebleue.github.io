@@ -176,14 +176,19 @@ h6 {
   vertical-align: middle;
   white-space: nowrap;
   overflow: hidden;
-  background-color: #faebd7; /* red background */
+  background-color: #f2ece4;
+  /* background-color: #faebd7; <- old color */
 
   border-top: 5px solid #cccccc;
   border-bottom: 5px solid #cccccc;
-  border: 3px solid #b22222;
-  border-radius: 11px;
+  border: 3px solid #0b001a;
+  /* border: 3px solid #b22222; <- old color */
+  border-radius: 2px
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  /* border-radius: 11px;
   -moz-border-radius: 11px;
-  -webkit-border-radius: 11px;
+  -webkit-border-radius: 11px; */
   margin-top: 5px;
   padding-left: 12px;
 }
@@ -198,7 +203,8 @@ h6 {
   top: 10px;
   left: 3px;
   margin: 0;
-  color: #ff6600; /* reddish, for head */
+  /* color: #ff6600; <- old colour*/ 
+  color: #011229; /* dark blue */
   line-height: 2.4;
   font-weight: 500;
   font-family: "Noto Serif TC", sans-serif;
@@ -209,6 +215,7 @@ h6 {
   margin-left: 16px;
 }
 
+/* Navigation (à droite) */
 #side {
   border: 1px solid #6a5acd;
   border-radius: 11px;
