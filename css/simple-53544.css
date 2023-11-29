@@ -35,9 +35,9 @@ SOFTWARE.
 
 body {
   font-family: "Mate", serif;
-  background-color: #ececec; /* It's #5368C1 on KARL */
+  background-color: #ffffff; /* It's #5368C1 on KARL */
   color: #121212;
-  max-width: 800px; /* Don't overwhelm large displays */
+  max-width: 1200px; /* Don't overwhelm large displays */
   margin: 0 auto;
   padding: 0;
   display: block;
