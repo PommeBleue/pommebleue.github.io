@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Amar AHMANE &bullet; CV</title>
+	<title>Amar AHMANE &bullet; XFER</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,700;1,400&family=Mate&family=Noto+Serif+TC:wght@500&family=PT+Sans&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="amar, amar ahmen, math, ens rennes, amar ens, ahmane ens">
-<meta description="Amar AHMANE | CV">
+<meta description="Amar AHMANE | Evan is sending you a file.">
 	<link rel="apple-touch-icon" sizes="180x180" href="https://perso.eleves.ens-rennes.fr/people/amar.ahmane/icons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" href="https://perso.eleves.ens-rennes.fr/people/amar.ahmane/icons/favicon-32x32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="https://perso.eleves.ens-rennes.fr/people/amar.ahmane/icons/favicon-16x16.png" sizes="16x16">
@@ -54,13 +54,92 @@
 			<div class="col-12 col-md-9 order-md-first pr-md-2">
 				<div id="main">
 					<div class="entry">
-						<h1 id="pagetitle"><a href="https://perso.eleves.ens-rennes.fr/people/amar.ahmane/upload/public-CV.pdf">CV</a></h1>
+						<h1 id="pagetitle"><a href="https://perso.eleves.ens-rennes.fr/people/amar.ahmane/xfer.html">evanchen.cc XFER</a></h1>
 						<div class="entrywrap">
-							<p>À venir.</p>
+							<div class="alert alert-secondary" id="output">
+<h3 class="alert-heading">Hello hello hey</h3>
+Evan Chen is sending you a private file,
+<a href="https://youtu.be/ChTGq3o9D6c">isn't that great</a>?
+</div>
+
+<hr />
+
+<div class="form-group">
+<label for="xfer_filename"><h3>Filename</h3></label>
+<input class="form-control" style="font-family:Inconsolata,monospace;" id="xfer_filename"></input>
+</label>
+</div>
+<div>
+<label for="xfer_password"><h3>Password</h3></label>
+<input type="password" class="form-control" id="xfer_password"></input>
+</label>
+<hr />
+<button class="btn btn-primary">Unlock</button>
+</div>
+<script type="text/javascript">
+$(() => {
+
+async function digestMessage(message) {
+const msgUint8 = new TextEncoder().encode(message);
+const hashBuffer = await crypto.subtle.digest('SHA-512', msgUint8);
+const hashArray = Array.from(new Uint8Array(hashBuffer));
+const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+return hashHex;
+}
+const url = new URL(window.location.href);
+const init_filename = url.searchParams.get('f');
+const target = url.searchParams.get('h');
+const salt = url.searchParams.get('s') || '';
+if (init_filename) {
+$("#xfer_filename").val(init_filename);
+}
+
+$("#xfer_password").on('focusout', async () => {
+  const filename = $("#xfer_filename").val();
+  const password = $("#xfer_password").val();
+  const kludge = 'evanchen.cc/xfer|' + filename + '|' + salt + '|' + password;
+  const h1 = await digestMessage(kludge);
+  const h3 = await digestMessage(h1);
+  const checksum = h3.slice(0,6);
+  if (password === "") {
+    $("#output").removeClass();
+    $("#output").addClass("alert alert-warning");
+    $("#output").html(
+      `<h3 class="alert-heading">Aloha</h3>`
+      + `Type the filename and password (both required).`
+    );
+  } else if (target && target !== checksum && filename === init_filename) {
+    $("#output").removeClass();
+    $("#output").addClass("alert alert-danger");
+    $("#output").html(
+      `<h3 class="alert-heading">Wrong!</h3>`
+      + `You entered an invalid password, try again.`
+    );
+  } else if (!target) {
+    $("#output").removeClass();
+    $("#output").addClass("alert alert-primary")
+    $("#output").html(
+      `<h3 class="alert-heading">Here you go!</h3>`
+      + `<a href="https://perso.eleves.ens-rennes.fr/people/amar.ahmane/xfer-payload/${h1}" download="${filename}" class="alert-link">`
+      + `Download now (checksum ${checksum})</a>. `
+      + `If you get a 404 error, check the password.`
+    );
+  } else {
+    $("#output").removeClass();
+    $("#output").addClass("alert alert-success")
+    $("#output").html(
+      `<h3 class="alert-heading">Success!</h3>`
+      + `<a href="https://perso.eleves.ens-rennes.fr/people/amar.ahmane/xfer-payload/${h1}" download="${filename}" class="alert-link"> Download now</a>.`
+);
+}
+});
+
+});
+</script>
 						</div>
 					</div>
 					<div>
-						<p><div class="text-muted">Voir le <a href="https://github.com/PommeBleue/pommebleue.github.io">code source de cette page</a>.</div></p>
+						<p><div><a href="https://github.com/PommeBleue/pommebleue.github.io">Code source (git)</a></div><div class="text-muted">Mis à jour le Dimanche 14 mai 2023 à 22:33:36 par <a href="https://github.com/PommeBleue/pommebleue.github.io/commit/796dab5e0cd931e3f760960808a3154098e00c54"><code>796dab5e0cd9</code></a></div></p>
 					</div>
 				</div>
 			</div>
