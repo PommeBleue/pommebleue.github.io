@@ -35,7 +35,7 @@ SOFTWARE.
 
 body {
   font-family: "Mate", serif;
-  background-color: #f6f6f6; /* It's #5368C1 on KARL */
+  background-color: #ffffff; /* It's #5368C1 on KARL */
   color: #121212;
   max-width: 800px; /* Don't overwhelm large displays */
   margin: 0 auto;
@@ -70,13 +70,12 @@ a:visited {
 }
 a:hover {
   color: #006b57;
-  text-shadow: 0 0 5px #ff0;
   text-decoration: underline;
 }
 
 h1 a:link,
 h1 a:visited {
-  color: #3333ff;
+  color: #3333ff94;
 }
 h2 a:link,
 h2 a:visited {
@@ -157,11 +156,11 @@ h6 {
 
 #main {
   padding: 5px;
-  border: 1px solid #2e8b57;
-  border-radius: 11px;
-  moz-border-radius: 11px;
-  -webkit-border-radius: 11px;
-  background-color: #b2fee1; /* light green color */
+  border: 1px solid #050e25;
+  border-radius: 2px;
+  -moz-outline-radius: 2px;
+  -webkit-border-radius: 2px;
+  background-color: #f2ece4; 
   margin-top: 12px;
   margin-left: 0px;
 }
@@ -176,14 +175,19 @@ h6 {
   vertical-align: middle;
   white-space: nowrap;
   overflow: hidden;
-  background-color: #faebd7; /* red background */
+  background-color: #f2ece4;
+  /* background-color: #faebd7; <- old color */
 
   border-top: 5px solid #cccccc;
   border-bottom: 5px solid #cccccc;
-  border: 3px solid #b22222;
-  border-radius: 11px;
+  border: 3px solid #0b001a;
+  /* border: 3px solid #b22222; <- old color */
+  border-radius: 2px
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  /* border-radius: 11px;
   -moz-border-radius: 11px;
-  -webkit-border-radius: 11px;
+  -webkit-border-radius: 11px; */
   margin-top: 5px;
   padding-left: 12px;
 }
@@ -198,7 +202,8 @@ h6 {
   top: 10px;
   left: 3px;
   margin: 0;
-  color: #ff6600; /* reddish, for head */
+  /* color: #ff6600; <- old colour*/ 
+  color: #011229; /* dark blue */
   line-height: 2.4;
   font-weight: 500;
   font-family: "Noto Serif TC", sans-serif;
@@ -207,21 +212,6 @@ h6 {
 #pagetitle {
   font-weight: 700;
   margin-left: 16px;
-}
-
-#side {
-  border: 1px solid #6a5acd;
-  border-radius: 11px;
-  -moz-border-radius: 11px;
-  -webkit-border-radius: 11px;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  background-color: #afeeee;
-  /* light blue background for side */
-  line-height: 20px;
-  padding: 12px;
-  margin-top: 12px;
 }
 
 /* Brighten side box on hover */
@@ -251,21 +241,6 @@ h6 {
   color: #7d0081;
 }
 
-#email_box {
-  margin-top: 3px;
-  background-color: #87ceeb;
-  border-radius: 9px;
-  -moz-border-radius: 9px;
-  -webkit-border-radius: 9px;
-  border: 2px solid #48d1cc;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  font-size: 80%;
-  width: 100%;
-}
-
 #navtitle {
   color: blue;
   font-weight: 700;
@@ -273,11 +248,6 @@ h6 {
   margin-left: 10px;
   margin-right: 10px;
   float: left;
-}
-
-#latest_blog {
-  background-color: #abdeab;
-  font-family: "PT Sans", sans-serif;
 }
 
 /* ENTRY AND ENTRY WRAP */
@@ -289,7 +259,7 @@ div.entry {
   padding-bottom: 16px;
 }
 div.entrywrap {
-  background-color: #dedede;
+  background-color: #ffffff;
   border: 1px solid black;
   margin: 8px;
   overflow: auto;
