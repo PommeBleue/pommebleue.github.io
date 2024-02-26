@@ -1,7 +1,0 @@
-
-\begin{thenomenclature} 
-\nomgroup{A}
-  \item [{$\mu_A,\mu_f$}]\begingroup Polynôme minimal de la matrice $A$ ou de l'endomorphisme $f$\nomeqref {0}\nompageref{18}
-  \item [{$\Sigma^*$}]\begingroup Monoïde des mots sur l'alphabet $\Sigma$ ($\Sigma^*=\bigcup_{n\in\N}\Sigma^n$)\nomeqref {0}\nompageref{3}
-
-\end{thenomenclature}

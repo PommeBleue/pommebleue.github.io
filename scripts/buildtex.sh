@@ -1,11 +1,5 @@
 #!/bin/sh
 
-#for var in $(ls ./src/tex); do
-#    if [ -d ./src/tex/$var ]; then
-#        cd ./src/tex/$var
-#        pdflatex main.tex
-#        cd ../../..
-#    fi
-#done
+pdflatex -synctex=1 -interaction=nonstopmode -output-directory='./src/tex/colles/' './src/tex/colles/main.tex'
 
-rm -vf ./src/tex/*/*.log ./src/tex/*/*.bbl ./src/tex/*/*.blg ./src/tex/*/*.toc ./src/tex/*/*.aux ./src/tex/*/*.out ./src/tex/*/*.idx ./src/tex/*/*.ilg ./src/tex/*/*.ind ./src/tex/*/*.fls ./src/tex/*/*.synctex.gz ./src/tex/*/*.fdb_latexmk
+rm -vf ./src/tex/*/*.log ./src/tex/*/*.aux ./src/tex/*/*.idx ./src/tex/*/*.toc ./src/tex/*/*.synctex.gz ./src/tex/*/*.out ./src/tex/*/*.dvi ./src/tex/*/*.fdb_latexmk ./src/tex/*/*.fls ./src/tex/*/*.ilg ./src/tex/*/*.ind ./src/tex/*/*.nlo ./src/tex/*/*.nls

@@ -106,11 +106,11 @@ On munit $\R[X]$ de la norme $\norm{\cdot}_{\infty}$ définie par $\norm{\sum_{k
         On montre que l'on peut extraire de $(Q_n)$ une suite dont tous les termes sont des polynômes de degré égal à $p$.
         Pour cela, on montre 
         \[
-            \forall q\in\N, \exists n\geq < q,\ \deg Q_n=p    
+            \forall q\in\N, \exists n\geq q,\ \deg Q_n=p    
         \]
         en procédant par l'absurde : on suppose alors 
         \[
-            \exists <\in\N, \forall n\geq q,\ \deg Q_n\neq p
+            \exists q\in\N, \forall n\geq q,\ \deg Q_n\neq p
         \]
         On a soit une infinté de $n$ tels que $\deg Q_n > p$ ou une infinité de $n$ tels que $\deg Q_n < p$. 
         Le deuxième cas n'est en fait pas possible (on laisse au lecteur les soins de justifier cela). 
@@ -129,7 +129,7 @@ On munit $\R[X]$ de la norme $\norm{\cdot}_{\infty}$ définie par $\norm{\sum_{k
         \[
             \forall n\in\N,\forall z\in\C,\ |Q_{\varphi(n)}(z)|\geq|\Im(z)|^p    \tag*{(*)}
         \]
-        Or, en notant $Q_{\varphi(n)}=\sum_{k=0}^pa_k^{(n)}X^k$ et $P=\sum_{k=0}^na_kX^k$, on a pour tout $k$, $a_k^{(n)}\to a_k$, donc pour tout $z\in\C$, $Q_n(z)\to P(z)$,
+        Or, en notant $Q_{\varphi(n)}=\sum_{k=0}^pa_k^{(n)}X^k$ et $P=\sum_{k=0}^pa_kX^k$, on a pour tout $k$, $a_k^{(n)}\to a_k$, donc pour tout $z\in\C$, $Q_n(z)\to P(z)$,
         soit, en passant à la limite dans (*)
         \[
             \forall z\in\C,\ |P(z)|\geq|\Im(z)|^p
@@ -177,3 +177,8 @@ On munit $\R[X]$ de la norme $\norm{\cdot}_{\infty}$ définie par $\norm{\sum_{k
     alors $f([0,1]^2\backslash\lbrace c\rbrace)$ contient toujours $a$ et $b$, donc tout l'intervalle $[a,b]$, et donc on trouve deux antécédents au même élément,
     ce qui est exclu car $f$ est injective.
 \end{correction}
+
+\begin{remark}
+    Il est possible de construire une injection de $\R^2$ dans $\R$ (vous pouvez essayer de le faire, ce n'est pas très compliqué),
+    et même, plus intéressant, une surjection continue de $[0,1]$ dans $[0,1]^2$ (nettement plus difficile; ces objets portent le doux nom de \textit{courbe remplissante} ou \textit{space-filling curves} en anglais).
+\end{remark}

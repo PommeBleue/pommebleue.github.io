@@ -683,6 +683,9 @@ INPUT sections/intgen.tex
 INPUT ./sections/euclidiens.tex
 INPUT ./sections/euclidiens.tex
 INPUT sections/euclidiens.tex
+INPUT ./sections/cd.tex
+INPUT ./sections/cd.tex
+INPUT sections/cd.tex
 INPUT ./sections/edo.tex
 INPUT ./sections/edo.tex
 INPUT sections/edo.tex
@@ -701,9 +704,6 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.t
 INPUT ./sections/misc.tex
 INPUT ./sections/misc.tex
 INPUT sections/misc.tex
-INPUT ./main.nls
-INPUT ./main.nls
-INPUT main.nls
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

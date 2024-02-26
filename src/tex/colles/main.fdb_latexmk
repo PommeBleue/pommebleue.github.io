@@ -1,13 +1,13 @@
 # Fdb version 4
-["makeindex main.idx"] 1706824717 "main.idx" "main.ind" "main" 1708415073 2
-  "main.idx" 1708415073 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1708931723 "main.idx" "main.ind" "main" 1708932618 0
+  "main.idx" 1708932617 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1708415072 "/Users/tiplouf/Documents/ens/site/poole/src/tex/colles/main.tex" "main.pdf" "main" 1708415073 0
-  "/Users/tiplouf/Documents/ens/site/poole/src/tex/colles/main.tex" 1706898297 1122 3bd25182e322689fed6bea0cd3c807da ""
-  "/Users/tiplouf/documents/ens/site/poole/src/tex/header.tex" 1706902881 16276 6e91eb6ddccd9b42ca2acb2a53bcceb5 ""
+["pdflatex"] 1708932616 "/Users/tiplouf/Documents/ens/site/poole/src/tex/colles/main.tex" "main.pdf" "main" 1708932618 0
+  "/Users/tiplouf/Documents/ens/site/poole/src/tex/colles/main.tex" 1708928248 1178 655e30bd1daef3679a863c6acb04b258 ""
+  "/Users/tiplouf/documents/ens/site/poole/src/tex/header.tex" 1708926715 16300 fd2216e9ae1fc6bf5b945f5255c4c93f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -388,16 +388,17 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1697922165 4710157 881d30f3c679b3ae82ecfb33f956b294 ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1697922262 8195312 d66be20ccc4c523a04d582e818a94d38 ""
   "/usr/local/texlive/2023/texmf.cnf" 1697889785 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "main.aux" 1708415073 7774 8a912e1a794c7ee00e5749bcfcfbc129 "pdflatex"
-  "main.ind" 0 -1 0 "makeindex main.idx"
-  "main.nls" 1706552602 330 fc18fdf22ca6e413d5bf8300ac27b889 ""
-  "main.out" 1708415073 11735 ed3f0db4563a37f590f8882c6b45113e "pdflatex"
-  "main.tex" 1706898297 1122 3bd25182e322689fed6bea0cd3c807da ""
-  "main.toc" 1708415073 5024 54a25c244b901678d6fd90234d3e2cf6 "pdflatex"
+  "main.aux" 1708932617 8299 e2b002fb05c97e45f65f125ca34e83f4 "pdflatex"
+  "main.ind" 1708931723 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.nls" 0 -1 0 ""
+  "main.out" 1708932617 12354 31acec40221f06c8c783ed5ca76547ca "pdflatex"
+  "main.tex" 1708928248 1178 655e30bd1daef3679a863c6acb04b258 ""
+  "main.toc" 1708932617 5423 5ef2f5cba059876d93ce57832225159f "pdflatex"
   "sections/al.tex" 1706804693 3998 987b35fdaf2093a75857ff407139c747 ""
+  "sections/cd.tex" 1708930429 2457 b0921d886116474d1430aaf930a47c14 ""
   "sections/edo.tex" 1706806462 388 24e38a45f9821879e46d0e509b25f26d ""
-  "sections/euclidiens.tex" 1707789391 14838 cf7b79e53a17f48f2757086a4d1d908d ""
-  "sections/evn.tex" 1706905946 11682 bd4df5c327a5dd9851f6f6f9e40691ba ""
+  "sections/euclidiens.tex" 1708932279 16033 69d341a87691555566bf98f5b61614cb ""
+  "sections/evn.tex" 1708932616 12062 1bda2dd8b71512d93413a94118ab6dc8 ""
   "sections/intgen.tex" 1706765264 7620 26574e79ea0766a18746fb7f3daf7b7c ""
   "sections/misc.tex" 1708415067 5175 6ac6c0834f08b671d5d08a114d95fe5b ""
   "sections/probas.tex" 1706897919 4422 61ec9fcb804bcdaa45b6899103e15b4c ""

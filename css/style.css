@@ -229,6 +229,11 @@ article>h1 {
     margin: 0 auto 25px auto;
 }
 
+body>div>header>ul>h1 {
+    font-size: 30px;
+    margin-right: 1em;
+}
+
 /* end h1 */
 
 /* strong */
@@ -453,7 +458,7 @@ body>footer>ul {
     }
 }
 
-body>header>ul {
+body>div>header>ul {
     grid-area: right;
     width: 100%;
     list-style: none;
@@ -670,7 +675,7 @@ h2 {
     text-transform: lowercase;
 }
 
-body>header>h2 {
+body>div>header>h2 {
     color: var(--red);
     text-transform: none;
     font-size: 2.1em;
@@ -816,23 +821,24 @@ body>header>nav>ul>li:first-child {
 
 /* end li */
 
-/* body > header */
+/* body > div > header */
 
-body>header {
+body>div>header {
     width: 100%;
     margin: 0;
-    margin-bottom: -2em;
+    margin-top: 2em;
+    margin-bottom: 1em;
     padding: 0 15px;
     box-sizing: border-box;
     height: 90px;
     /*border-bottom: 1px solid var(--light-gray, #eee);*/
     position: relative;
-    display: grid;
     grid-template-rows: auto;
     grid-template-columns: 30px auto 0;
     grid-template-areas: "left center right";
     justify-items: start;
     align-items: center;
+    text-align: center left;
     grid-column-gap: 20px;
 }
 
@@ -881,7 +887,12 @@ section>header {
 
 /* nav */
 
-body>header>nav {
+body>div>header>nav {
+    grid-area: right;
+    width: 100%;
+}
+
+body>div>header>ul {
     grid-area: center;
     width: 100%;
 }
@@ -992,4 +1003,36 @@ figure>div {
 
 div.header {
     margin-top: 1cm;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    font-size: 25px;
+    position: absolute;
+    background-color: var(--light-gray);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+  /* Links inside the dropdown */
+.dropdown-content a {
+    padding: 10px 16px;
+    color: white;
+    display: block;
+}
+  
+  
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    color: white;
+    display: block;
 }

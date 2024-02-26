@@ -69,7 +69,7 @@
 		\item Soit $M\in\mathcal O_n(\R)$. 
 		Notons $\norm{\cdot}_2$ la norme euclidienne usuelle sur les matrices et $b$ la forme polaire de la forme quadraitque $\norm{\cdot}_2^2$. 
 		Comme $MM^T=I_n$, on obtient $\tr(MM^T)=n$ soit $\norm{M}_2=\sqrt n$. 
-		Puis, si on pose $A=(a_{i,j})$ avec $a_{i,j}=1$ si $m_{i,j}\geq 0$ et $a_{i,j}=-1$ sinon.
+		Puis, si on pose $A=(a_{i,j})$ avec $a_{i,j}=1$ si $m_{i,j}\geq 0$ et $a_{i,j}=-1$ sinon, l'inégalité de Schwarz nous donne
 		\[
 			|b(M,A)|\leq\norm{A}_2\norm{M}_2
 		\]
@@ -198,7 +198,20 @@
 \end{exercice}
 
 \begin{correction}
-	[À rédiger]
+	\begin{enumerate}
+		\item $J$ est différentiable, et son gradient en $x$ est $\nabla J(x)=Ax-b$ pour $x\in \R^n$.
+		Cela donne $\langle \nabla J(y)-\nabla J(x),y-x\rangle=\langle A(y-x),y-x\rangle$, et on vérifie que $x\mapsto\sqrt{\langle Ax,x\rangle}$ est bien définie et définit une norme,
+		qui est alors équivalente à $\norm{\cdot}_2$, d'où l'existence de $\alpha >0$ tel que 
+		\[
+			\forall x,y\in\R^n,\ \langle \nabla J(y)-\nabla J(x),y-x\rangle\geq\alpha^2\norm{y-x}^2
+		\]
+		et on peut montrer que cela suffit pour que $J$ soit strictement convexe (voir par exemple l'épreuve de Mathématiques C, ENS 2019).
+		\item C'est une conséquence directe de la convexité.
+		\item Prendre $\alpha$ un élément de l'image de $J$, et prendre $B$ une boule fermée de rayon assez grand de sorte que $\alpha$ soit dans $J(B)$.
+		Comme on est en dimension finie, $B$ est compact, $J$ admet un minimum sur $B$.
+		Par coercivité de $J$, $B$ peut-être en plus choisi de sorte que si $x\notin B$, $\norm{J(x)}\geq\alpha+1$, ce qui montre que le minimum sur $B$ est un minimum global.
+		L'unicité est une conséquence directe de la stricte convexité.
+	\end{enumerate}
 \end{correction}
 
 \subsection{Croissance de la trace de l'exponentielle}

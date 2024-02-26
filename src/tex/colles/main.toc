@@ -40,12 +40,15 @@
 \contentsline {subsection}{\numberline {8.3}Un TLM pour les matrices}{30}{subsection.8.3}%
 \contentsline {subsection}{\numberline {8.4}Convexité (1)}{31}{subsection.8.4}%
 \contentsline {subsection}{\numberline {8.5}Convexité (2)}{31}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Croissance de la trace de l'exponentielle}{31}{subsection.8.6}%
-\contentsline {section}{\numberline {9}Équations différentielles}{34}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Une équation différentielle}{34}{subsection.9.1}%
-\contentsline {section}{\numberline {10}Probabilités, dénombrement}{35}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Calcul d'espérence et de variance (1)}{35}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Calcul d'espérence et de variance (2)}{36}{subsection.10.2}%
-\contentsline {section}{\numberline {11}Miscellaneous}{37}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Cardinal maximal d'une partie fade}{37}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Dérivée seconde}{37}{subsection.11.2}%
+\contentsline {subsection}{\numberline {8.6}Croissance de la trace de l'exponentielle}{32}{subsection.8.6}%
+\contentsline {section}{\numberline {9}Calcul différentiel}{34}{section.9}%
+\contentsline {subsection}{\numberline {9.1}$\mathcal C^1\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}$ localement lipschitzien}{34}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Généralisation du théorème de Rolle}{34}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Équations différentielles}{35}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Une équation différentielle}{35}{subsection.10.1}%
+\contentsline {section}{\numberline {11}Probabilités, dénombrement}{36}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Calcul d'espérence et de variance (1)}{36}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Calcul d'espérence et de variance (2)}{37}{subsection.11.2}%
+\contentsline {section}{\numberline {12}Miscellaneous}{38}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Cardinal maximal d'une partie fade}{38}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Dérivée seconde}{38}{subsection.12.2}%

@@ -1,0 +1,41 @@
+\subsection{$\mathcal C^1\implies$ localement lipschitzien}
+\begin{exercice}
+    Soit $U$ un ouvert de $\R^n$ et $f:U\to R^n$. 
+    On dit que $f$ est localement lipschitzienne si pour tout $y_0\in U$, 
+    il existe $V\subseteq U$ un voisiage de $y_0$ et $L_{y_0}\geq 0$ tels que pour tous $x,y\in V$, $\norm{f(x)-f(y)}\leq L_{y_0}\norm{x-y}$.
+    Montrer que si $f$ est de classe $\mathcal C^1$, alors $f$ est localement lipschitzienne. 
+\end{exercice}
+
+\begin{correction}
+    Soit $y_0\in U$. Il existe $\varepsilon >0$ tel que $V=B(y_0,\varepsilon)\subseteq U$. On prend alors $x,y\in V$ 
+    et on pose $\varphi:t\in[0,1]\mapsto f(x+t(y-x))$, $\mathcal C^1$ par composition, de dérivée $\varphi'(t)=\d f_{\varphi(t)}(y-x)$. 
+    On a alors
+    \[
+        \forall t\in[0,1],\ \norm{\d f_{\varphi(t)}(y-x)}\leq\norm{\d f_{\varphi(t)}}_{\mathcal L(\R^n,\R^n)}\norm{y-x}
+    \]
+    et $df$ étant continue, et $\varphi$ étant à valeurs dans un compact, $\norm{\d f_{\varphi(t)}}_{\mathcal L(\R^n,\R^n)}$ est majorée par une constante $L_{y_0}$ sur $[0,1]$.
+    On a ensuite 
+    \[
+        \norm{f(y)-f(x)}\leq\norm{\varphi(1)-\varphi(0)}=\norm{\int_0^1\varphi'(t)\d t}\leq\int_0^1\norm{\varphi'(t)}\d t\leq L_{y_0}\norm{y-x}
+    \]
+    et ceci vaut pour tous $x,y\in V$. 
+    Cela achève de démontrer la thèse de l'énoncé.
+\end{correction}
+
+\subsection{Généralisation du théorème de Rolle}
+\begin{exercice}
+    On note $B$ (resp. $B_f$) la boule unité ouverte (resp. fermée) de $\R^n$ et $\mathbf S^{n-1}$ la sphère unité de $\R^n$.
+    Soit $f:B_f\to\R$ continue sur $B_f$, différentiable sur $B$, constante sur $\mathbf S^{n-1}$.
+    Montrer que $\d f$ s'annule sur $B$.
+\end{exercice}
+
+\begin{correction}
+    En effet, $B_f$ étant compact ($\R^n$ est de dimension finie, pardi) et $f$ étant continue sur $B_f$ à valeurs réelles,
+    $f$ est bornée sur $B_f$ et on peut noter $f(x_0)=m=\min f$ et $f(x_1)=M=\max f$ (les min et max étant pris sur $B_f$).
+    Deux cas de figure se présentent :
+    \begin{itemize}
+        \item Soit $m = M$, alors $f$ est constante sur tout $B_f$ et le résultat est trivial;
+        \item soit $m<M$, et nécessairement $x_1\notin \mathbf S^{n-1}$ ou $x_0\notin \mathbf S^{n-1}$ car $f$ y est constante. 
+        Si par exemple $x_0\notin\mathbf S^{n-1}$, alors $x_0\in B$, donc $f$ admet un extremum local en $x_0$ sur l'ouvert $B$, et alors $\d f_{x_0}=0$.
+    \end{itemize}
+\end{correction}
