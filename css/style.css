@@ -468,6 +468,7 @@ body>div>header>ul {
     flex-direction: row;
     justify-content: flex-start;
     min-width: 130px;
+    width:500px;
 }
 
 @media screen and (min-width: 460px) {
