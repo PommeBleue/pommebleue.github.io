@@ -111,9 +111,6 @@ Soit $p$ un nombre premier, $n\in\N^*$ et $A\in\mathcal M_n(\mathbb F_p)$. Montr
 \subsection{Limite d'une suite de matrices}
 \begin{exercice}
 	Soit $M\in\mathcal M_n(\K)$, $\K = \R$ ou $\C$. Donner une condition nécessaire et suffisante pour que la suite $(M^p)_{p\in\N}$ converge. Que dire sur la valeur de la limite en cas de convergence ?
-
-	Soit $M\in\mathcal M_n(\K)$, $\K = \R$ ou $\C$. On suppose que $(M^p)_{p\in\N}$ converge. Que dire alors sur les valeurs propres complexes de $M$ ? 
-	Si de plus $1$ figure parmi les valeurs propres de $M$, donner la valeur de la multiplicité de $1$ en tant que racine du polynôme minimal de $M$.
 \end{exercice}
 
 \begin{correction}
@@ -159,12 +156,12 @@ Soit $p$ un nombre premier, $n\in\N^*$ et $A\in\mathcal M_n(\mathbb F_p)$. Montr
     \[
         M^p=(N+D)^p=\sum_{k=0}^p\binom pkD^{p-k}N^k=\sum_{k=0}^{n-1}\binom pk D^{p-k}N^k   \tag*{(*)} 
     \]
-    Soit $P\in\GL_n(\C)$ telle que $PDP^{-1}$ soit diagonale. 
+    Soit $P\in\GL_n(\C)$ telle que $\Delta=PDP^{-1}$ soit diagonale. 
     Dans un premier temps, supposons que $1$ n'est pas valeur propre de $M$.
-    Dans ce cas, pour tout $k\in\lbrace0,n-1\rbrace$, $\binom pkD^k\to 0$ : en effet,
-    ces matrices sont diagonales, donc pour $i=1,\dots,p$, $[\binom pkD^{p-k}]_{i,i}=\binom pk\lambda_i^{p-k}$ avec 
-    $|\lambda_i|<1$, d'où $[\binom pkD^{p-k}]_{i,i}\to 0$ car $\binom pk\sim p^k/k!$ et $p^k=o(1/\lambda_i^{p-k})$.
-    Il vient alors que $M^p\to 0$ comme somme finie de trucs qui tendent vers $0$.
+    Dans ce cas, pour tout $k\in\lbrace0,\dots,n-1\rbrace$, $\binom pk\Delta^{p-k}\to 0$ : en effet,
+    ces matrices sont diagonales, donc pour $i=1,\dots,n$, $\left[\binom pk\Delta^{p-k}\right]_{i,i}=\binom pk\lambda_i^{p-k}$ avec 
+    $|\lambda_i|<1$, d'où $\left[\binom pk\Delta^{p-k}\right]_{i,i}\to 0$ car $\binom pk\sim p^k/k!$ et $p^k=o(1/\lambda_i^{p-k})$.
+    Par continuité de la multiplication par une matrice $\binom pk D^{p-k}=\binom pkP\Delta^{p-k}P^{-1}\to 0$ et alors $M^p\to 0$ comme somme finie de trucs qui tendent vers $0$.
 
     Si $M$ a $1$ pour valeur propre, on montre qu'en fait si $(M^p)$ converge, alors $1$ est racine simple de $\mu_M$.
     Réciproquement, si $M$ a $1$ pour valeur propre et qu'elle racine simple de $\mu_M$, alors $(M^p)$ converge.
@@ -172,9 +169,6 @@ Soit $p$ un nombre premier, $n\in\N^*$ et $A\in\mathcal M_n(\mathbb F_p)$. Montr
 	\textit{Je ne rédige pas cette partie, puisque ma solution utilise un résultat hors programme (Jordanisation des endomorphismes) en CPGE. 
 	Si vous trouvez un moyen de montrer ça dans le cadre du programme, je suis preneur.}
 	
-
-
-
     En conclusion, $(M^p)$ converge si et seulement si $M$ a toutes ses valeurs propres complexes de module strictement plus petit que $1$,
     ou si $M$ est diagonalisable et toutes ses valeurs propres complexes sont soit égales à $1$ soit de module strictement plus petit que $1$.
 \end{correction}
