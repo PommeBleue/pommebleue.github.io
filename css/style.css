@@ -66,9 +66,9 @@ body {
     overflow-x: hidden;
     width: 100vw;
     min-height: 100vh;
-    max-width: var(--max-width-body, 1120px);
+    max-width: var(--max-width-body, 800px);
     color: var(--black, #353839);
-    background-color: #f0e8d3;
+    background-color: #fffffc;
     font-family: "EB Garamond", Palatino, serif;
     font-variant: normal;
     -webkit-font-smoothing: antialiased;
