@@ -68,7 +68,7 @@ body {
     min-height: 100vh;
     max-width: 800px;
     color: var(--black, #353839);
-    background-color: #fffffc;
+    background-color: #ffffff;
     font-family: "EB Garamond", Palatino, serif;
     font-variant: normal;
     -webkit-font-smoothing: antialiased;
