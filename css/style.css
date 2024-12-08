@@ -53,7 +53,7 @@
     --grid-row-gap: 0;
     --black: #131343;
     --red: #933;
-    --code: #fffffc;
+    --code: #ffd;
     --gray: #ddd;
     --light-gray: #131343;
     --aspect-ratio: 1 / 1;
@@ -68,7 +68,7 @@ body {
     min-height: 100vh;
     max-width: var(--max-width-body, 1120px);
     color: var(--black, #353839);
-    background-color: #f0e8d3;
+    /* background-color: #f0e8d3; */
     font-family: "EB Garamond", Palatino, serif;
     font-variant: normal;
     -webkit-font-smoothing: antialiased;
