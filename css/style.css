@@ -86,6 +86,27 @@ footer {
     margin-bottom: 10px;
 }
 
+.description {
+    display: grid;
+    grid-template-areas: "text . uwu";
+}
+
+.description .aside {
+    grid-area: text;
+}
+
+.description img {
+    grid-area: uwu;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    border: 1px solid #ddd;
+    box-shadow: 5px 5px 5px #eee;
+    padding: 1em;
+    overflow-x: auto;
+}
+
 .menu {
     padding: 0;
 }
@@ -132,7 +153,7 @@ hr {
 
 /* code */
 pre {
-    width: min(150ch,80%);
+    width: min(150ch,85%);
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
