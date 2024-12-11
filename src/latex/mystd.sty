@@ -1,0 +1,102 @@
+\ProvidesPackage{mystd}
+
+\usepackage{mathtools,amssymb,amsthm,amsfonts,amscd,amsmath,mathrsfs}
+\usepackage[svgnames,dvipsnames]{xcolor}
+
+\definecolor{AccColor1}{HTML}{C41E3A}     %#C41E3A
+\definecolor{AccColor2}{HTML}{233F8D}     %#233F8D
+\definecolor{AccColor3}{HTML}{D19820}     %#D19820
+\definecolor{AccColor4}{HTML}{148670}     %#148670
+\colorlet{ColAccGood}{AccColor4}          %#148670
+\definecolor{ColAccBad}{HTML}{D14B20}     %#D14B20
+\colorlet{MainColor}{AccColor1}           %#C41E3A
+\definecolor{LinkColor1}{HTML}{329B71}    %#329B71
+\colorlet{LinkColor2}{AccColor2}          %#233F8D
+
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{urlcolor=LinkColor1,linkcolor=LinkColor2,citecolor=LinkColor2}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\usepgflibrary{patterns} 
+\usetikzlibrary{patterns,arrows}
+\usepackage{tikz-3dplot}
+\usepackage{tkz-euclide}
+\usetikzlibrary{math,shapes,calc,positioning,fit,decorations.markings}
+\tikzset{>=latex}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{2mm}
+\usepackage[french]{babel}
+
+%  ----------  SHORT AND USEFUL STUFF  ----------  %
+
+\let\ker\relax
+\let\Im\relax
+\DeclareMathOperator{\Ims}{Im}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\N}{\mathbb N}
+\DeclareMathOperator{\Z}{\mathbb Z}
+\DeclareMathOperator{\Q}{\mathbb Q}
+\DeclareMathOperator{\R}{\mathbb R}
+\DeclareMathOperator{\Rpe}{\mathbb R_+^*}
+\DeclareMathOperator{\Rme}{\mathbb R_-^*}
+\DeclareMathOperator{\C}{\mathbb C}
+\DeclareMathOperator{\K}{\mathbb K}
+\DeclareMathOperator{\T}{\mathbb T}
+\DeclareMathOperator{\gl}{GL}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\rg}{rg}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\ddns}{d}
+\DeclareMathOperator{\Card}{Card}
+\DeclareMathOperator{\Vect}{Vect}
+\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\Adh}{Adh}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\DM}{DM}
+\DeclareMathOperator{\MD}{MD}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\cd}{cd}
+
+
+\newcommand{\dd}{\ddns\hskip-1.5pt}
+\newcommand{\ddp}[1]{{\dd}^{#1}\hskip-1.5pt}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\inl}[2]{[\![#1,#2]\!]}
+\newcommand{\tnorm}[1]{\left|\hskip-.12em\lVert #1\rVert\hskip-.12em\right|}
+
+%  ----------------------------------------------  %
+
+\renewcommand{\thepart}{}
+\renewcommand{\partname}{}
+
+\usepackage{listings}
+\usepackage{textcomp}
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numberstyle=\ttfamily,
+    numbers=left,
+    numbersep=5pt,
+    numberstyle=\tiny,
+    keywordstyle=\bfseries,
+    showstringspaces=false,
+    tabsize=4,
+    frame=single,
+    keywordstyle=\bfseries\color{blue},
+    commentstyle=\color{green!70!black},
+    identifierstyle=\color{green!20!black},
+    stringstyle=\color{orange},
+    breaklines=true,
+    breakatwhitespace=true,
+    frame=none,
+    texcl=true    % for unicode and math in the comments
+}

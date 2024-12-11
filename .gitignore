@@ -1,0 +1,12 @@
+*.log 
+*.aux 
+*.idx 
+*.toc 
+*.synctex.gz 
+*.out 
+*.dvi 
+*.fdb_latexmk 
+*.fls 
+*.ilg 
+*.ind 
+*.pgf-plot.gnuplot
