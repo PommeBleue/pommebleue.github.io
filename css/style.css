@@ -108,6 +108,7 @@ hr {
 
 /* code */
 pre {
+    overflow-x: inherit;
     white-space: pre-wrap;
 }
 
@@ -121,7 +122,7 @@ pre code {
 }
 
 main {
-    overflow: auto;
+    overflow: hidden;
 }
 
 main header {
