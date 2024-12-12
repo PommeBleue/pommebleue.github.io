@@ -11,4 +11,4 @@
 *.ilg 
 *.ind 
 *.pgf-plot.gnuplot
-helper
+src/img/me.jpg
