@@ -136,7 +136,7 @@ main > article img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
+    max-width: 80%;
     background-color: #ffffff;
     border: 1px solid #ddd;
     box-shadow: 5px 5px 5px #eee;
@@ -201,6 +201,7 @@ tr:nth-child(even) {
 
 .highlight  {
     margin-left: 5%;
+    max-width: 100%;
     padding-left: 1em;
     padding-top:0.05em;
     padding-bottom:0.05em;
