@@ -69,6 +69,7 @@ footer {
 }
 
 .menu li {
+    margin: 10px 0;
     display: inline-block;
 }
 
