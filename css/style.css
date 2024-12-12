@@ -64,6 +64,32 @@ footer {
     overflow-x: auto;
 }
 
+@media (max-width: 768px) {
+    .description {
+        display: grid;
+        grid-template-areas: 
+            "text"
+            "uwu"
+        ;
+    }
+    
+    .description .aside {
+        grid-area: text;
+    }
+    
+    .description img {
+        grid-area: uwu;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px;
+        border: 1px solid #ddd;
+        box-shadow: 5px 5px 5px #eee;
+        padding: 1em;
+        overflow-x: auto;
+    }
+}
+
 .menu {
     padding: 0;
 }
