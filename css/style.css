@@ -159,7 +159,7 @@ main {
     overflow: auto;
 }
 
-main > article img {
+main article figure img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -168,6 +168,11 @@ main > article img {
     border: 1px solid #ddd;
     box-shadow: 5px 5px 5px #eee;
     padding: 1em;
+}
+
+main > article .inline-math {
+    display: inline;
+    margin: 0;
 }
 
 main a:link {
@@ -234,6 +239,12 @@ tr:nth-child(even) {
     margin-bottom: 0.5em;
     background-color: #ffffff;
     overflow-x: scroll;
+}
+
+.display-math {
+    background-color: white;
+    margin: 0 3em;
+    padding: 1px;
 }
 
 /* .highlight::-webkit-scrollbar {
@@ -313,3 +324,5 @@ tr:nth-child(even) {
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
+
+.katex { font-size: 1.1em; }
