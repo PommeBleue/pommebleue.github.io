@@ -12,8 +12,5 @@ elif [[ $1 == "tex-svg" ]]; then
     xelatex -output-directory="./src/latex/${2}/${3}" "./src/latex/${2}/${3}/${3}.tex"
     pdf2svg "./src/latex/${2}/${3}/${3}.pdf" "./src/latex/${2}/${3}/${3}.svg"
 elif [[ $1 == "commit" ]]; then
-    git add . 
-    git commit -m $2
     update_footer_date
-    git push origin main
 fi
