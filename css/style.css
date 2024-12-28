@@ -175,6 +175,36 @@ main > article .inline-math {
     margin: 0;
 }
 
+/* main article table {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+    background-color: white;
+} */
+
+table tbody > tr:hover {
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+td:first-of-type{
+    font-weight: bold;
+    text-align: center;
+}
 main a:link {
     color: var(--blue-link);
 }
@@ -207,27 +237,6 @@ blockquote {
     background: #f9f9f9;
     border-left: 5px solid #ccc;
     padding: 3px 1em 3px;
-}
-
-table {
-    margin: auto;
-    border-top: 1px solid #666;
-    border-bottom: 1px solid #666;
-}
-
-table thead th {
-    border-bottom: 1px solid #ddd;
-}
-
-th,
-td {
-    padding: 5px;
-}
-
-thead,
-tfoot,
-tr:nth-child(even) {
-    background: #eee;
 }
 
 .highlight  {
