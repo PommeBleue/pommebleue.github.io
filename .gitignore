@@ -1,14 +1,36 @@
-.vscode
-*.log 
-*.aux 
-*.idx 
-*.toc 
-*.synctex.gz 
-*.out 
-*.dvi 
-*.fdb_latexmk 
-*.fls 
-*.ilg 
-*.ind 
+# Ignore editor directories and files
+.vscode/
+
+# Ignore LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.dvi
+*.xdv
+
+# Ignore generated images
 *.pgf-plot.gnuplot
+*.pgf-plot.table
+
 src/img/me.jpg
+
+# Ignore OS generated files
+**.DS_Store

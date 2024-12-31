@@ -176,7 +176,8 @@ table tbody > tr:hover {
 table {
     border-collapse: collapse;
     border: 0;
-    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;

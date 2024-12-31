@@ -1,8 +1,13 @@
 #!/bin/sh
+
 update_footer_date() {
     for file in $(git ls-files '*.html'); do
         last_commit_date=$(git log -1 --format="%ad" --date=short -- "$file")
-        sed -i '' "s/Updated on .*/Updated on $last_commit_date<\/p>/" "$file"
+        commit_hash=$(git log -1 --format="%H" -- "$file")
+        repo_url="https://github.com/USERNAME/REPO"  # Remplacez par l'URL de votre dépôt
+        commit_url="$repo_url/commit/$commit_hash"
+        formatted_date=$(LC_TIME=en_US.UTF-8 date -j -f "%Y-%m-%d" "$last_commit_date" "+%B %d, %Y")
+        sed -i '' "s|Updated on .*|Updated on $formatted_date (<a href=\"$commit_url\">$commit_hash</a>)</p>|" "$file"
     done
 }
 
