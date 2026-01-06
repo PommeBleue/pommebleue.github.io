@@ -7,13 +7,13 @@ const GRAY = "#BFBFBF";
 const FPS = 60;
 const TIME = 1000/FPS;
 const ISOANGLE = Math.PI / 2;
-const FACTOR = 2;
-const TRANSLATE_Y_SCREEN = -250;
+const FACTOR = 1;
+const TRANSLATE_Y_SCREEN = -300;
 
 const MS = 1;
-const ME = 1 / 1000000;
-const MM = ME / 100;
-const G = 4 * Math.PI**2;
+const ME = 3.003489596321 * Math.pow(10, -6);
+const MM = 1.23000383 * ME * Math.pow(10, -2);
+const G = 2.95912208286 * Math.pow(10, -4);
 
 //console.log(simulation);
 simulation.width = 400;
@@ -147,20 +147,20 @@ function scalar(lambda, {x, y, z}){
 }
 
 
-const dt = .005;
+const dt = .1;
 let first = true;
 let t = 0;
 let sun = {x : 0, y : 0, z : 1};
-let earth =  {x : 1.0, y : 0, z : 1};
-let moon = {x : 1 + 0.00257, y : 0, z : 1};
-let earth_vel = {x : 0, y : 2 * Math.PI, z : 0};
-let moon_vel = {x : 0, y : 2 * Math.PI + 0.2, z : 0};
+let earth =  {x : -0.1667743823220, y : 0.9690675883429, z : 1};
+let moon = {x : -0.1694619061456, y : 0.9692330175719, z : 1};
+let earth_vel = {x : -0.0172346557280, y : -0.0029762680930, z : 0};
+let moon_vel = {x : -0.0172817331582, y : -0.0035325102831, z : 0};
 
 function print_system(){
 	const csun = screen(expand(project(translate_z(rotate_yz(isometric(adapt(sun)), ISOANGLE), 1)), FACTOR));
-	const tmpearth = sum(sun, scalar(0.7, difference(earth, sun) ) )
+	const tmpearth = sum(sun, scalar(.75, difference(earth, sun) ) )
 	const cearth = screen(expand(project(translate_z(rotate_yz(isometric(adapt(tmpearth)), ISOANGLE), 1)), FACTOR));	
-	const tmpmoon = sum(tmpearth, scalar(.1/norm(difference(moon, earth)), difference(moon, earth)))
+	const tmpmoon = sum(tmpearth, scalar(50, difference(moon, earth)))
 	const cmoon = screen(expand(project(translate_z(rotate_yz(isometric(adapt(tmpmoon)), ISOANGLE), 1)), FACTOR));	
 	point(csun, 13, YELLOW, true)
 	point(cmoon, 1.5, GRAY, false)
