@@ -7,8 +7,9 @@ const GRAY = "#BFBFBF";
 const FPS = 60;
 const TIME = 1000/FPS;
 const ISOANGLE = Math.PI / 2;
-const FACTOR = 1;
-const TRANSLATE_Y_SCREEN = -300;
+const FACTOR = 2;
+const MAXV = 1.25
+const TRANSLATE_Y_SCREEN = -235;
 
 const MS = 1;
 const ME = 3.003489596321 * Math.pow(10, -6);
@@ -22,7 +23,7 @@ const ctx = simulation.getContext("2d");
 //console.log(ctx);
 
 function adapt({x, y, z}){
-	return {x : (1 + x) / 2, y : (1 + y) / 2, z};
+	return {x : MAXV * (1 + x) / 2, y : MAXV * (1 + y) / 2, z};
 }
 
 
@@ -104,28 +105,16 @@ function play(){
 
 const vsp = [
 	{x : 0, y : 0, z : 1},
-	{x : 1, y : 0, z : 1},
-	{x : 0, y : 1, z : 1},
-	{x : 1, y : 1, z : 1},
-	{x : 0, y : 0, z : 1.03},
-	{x : 1, y : 0, z : 1.03},
-	{x : 0, y : 1, z : 1.03},
-	{x : 1, y : 1, z : 1.03},
+	{x : MAXV, y : 0, z : 1},
+	{x : 0, y : MAXV, z : 1},
+	{x : MAXV, y : MAXV, z : 1}
 ]
 
 const fsp = [
 	[0, 1],
 	[0, 2],
 	[1, 3],
-	[2, 3],
-	// [0, 4],
-	// [1, 5],
-	// [2, 6],
-	// [3, 7],
-	// [4, 5],
-	// [4, 6],
-	// [5, 7],
-	// [6, 7]
+	[2, 3]
 ]
 
 
