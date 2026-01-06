@@ -38,6 +38,10 @@
                 <img src="src/img/simulSTL.png" width=45%>
                 <figcaption>Simulation du système Soleil-Terre-Lune à l'aide d'un intégrateur symplectique (illustration tirée de <a href="https://hal.science/hal-01560573v2">cet article</a>)</figcaption>
             </figure>
+            <figure>
+                <canvas id="simulation"></canvas>
+                <figcaption>Simulation animée. Cocher pour activer/désactiver l'animation <input type="checkbox" role="switch" id="check"></figcaption>
+            </figure>
             <h4>L3 Research internship</h4>
             <p>
                 Magistère de mathématiques de Rennes students must spend at least six weeks in a 
@@ -68,9 +72,11 @@
     </main>
     <footer>
         <p>
-            Updated on January 10, 2025</p>
+         Updated on January 10, 2025</p>
         </p>
     </footer>
+
+    <script src="scripts/canvas.js"> </script>
 </body>
 
 </html>
