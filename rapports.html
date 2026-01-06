@@ -1,14 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="en-us">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Amar Ahmane &bullet; Reports </title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/fonts.css" />
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title> Amar Ahmane &bull; Reports </title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/fonts.css" rel="stylesheet"/>
 </head>
-
 <body>
     <nav>
         <ul class="menu">
@@ -17,9 +16,8 @@
             <li><a href="ens.html">Teaching</a></li>
             <li><a href="tikz.html">PGF/TikZ figures</a></li>
         </ul>
-        <hr />
+        <hr/>
     </nav>
-
     <main>
         <article>
             <h1><em>Reports</em></h1>
@@ -28,53 +26,49 @@
             </p>
             <h4>Groupe de lecture, ENS Rennes, L3</h4>
             <p>
-                Groupe de lecture à l'ENS Rennes autour de méthodes géométriques d'intégration numérique.
-                Vous pouvez télécharger le <a
-                href="https://adrienlaurent.net/Enseignement/Thesis/Bachelor_Thesis_2024_Amar_Tristan.pdf">rapport</a>
-                ainsi que les <a
-                href="src/rapports/beamerLD.pdf">slides</a>.
+                Groupe de lecture &agrave; l'ENS Rennes autour de m&eacute;thodes g&eacute;om&eacute;triques d'int&eacute;gration num&eacute;rique.
+                Vous pouvez t&eacute;l&eacute;charger le <a href="https://adrienlaurent.net/Enseignement/Thesis/Bachelor_Thesis_2024_Amar_Tristan.pdf">rapport</a>
+                ainsi que les <a href="src/rapports/beamerLD.pdf">slides</a>.
             </p>
             <figure>
-                <img src="src/img/simulSTL.png" width=45%>
-                <figcaption>Simulation du système Soleil-Terre-Lune à l'aide d'un intégrateur symplectique (illustration tirée de <a href="https://hal.science/hal-01560573v2">cet article</a>)</figcaption>
+                <img src="src/img/simulSTL.png" width="45%"/>
+                <figcaption>Simulation du syst&egrave;me Soleil-Terre-Lune &agrave; l'aide d'un int&eacute;grateur symplectique (illustration tir&eacute;e de <a href="https://hal.science/hal-01560573v2">cet article</a>)</figcaption>
             </figure>
             <figure>
                 <canvas id="simulation"></canvas>
-                <figcaption>Simulation précédente animée.</figcaption>
+                <figcaption>Simulation pr&eacute;c&eacute;dente anim&eacute;e.</figcaption>
             </figure>
             <h4>L3 Research internship</h4>
             <p>
                 Magistère de mathématiques de Rennes students must spend at least six weeks in a 
                 research internship at the end of the first year. <a href="https://anne.vaugon.vwx.fr">Anne Vaugon</a> 
-                supervised mine at the Laboratoire de Mathémaitques d’Orsay. 
+                supervised mine at the Laboratoire de Mathémaitques d&rsquo;Orsay. 
                 You can access my report <a href="src/rapports/stage-l3.pdf">here</a>
                 (you can also access the <code>.tex</code> files <a href="https://github.com/PommeBleue/l3-internship">here</a>).
                 For now, there is only a French version.
             </p>
             <figure>
-                <img src="src/latex/figures/l3i-gtori/l3i-gtori.svg" alt="Connected sum of tori">
+                <img alt="Connected sum of tori" src="src/latex/figures/l3i-gtori/l3i-gtori.svg"/>
                 <figcaption> During the internship, I classified compact, connected, orientable and closed surfaces using Morse Theory </figcaption>
             </figure>
             <h4>M1 Research internship</h4>
             <p>
                 Research Internship done at the end of my first year of Masters (M1 Jacques Hadamard).
-                It was supervised by <a href = "https://staff.fnwi.uva.nl/s.g.cox/">Sonja Cox</a> 
+                It was supervised by <a href="https://staff.fnwi.uva.nl/s.g.cox/">Sonja Cox</a> 
                 and <a href="https://www.uva.nl/en/profile/l/u/e.luesink/e.luesink.html">Erwin Luesink</a>.
                 You can access my report <a href="src/rapports/m1report.pdf">here</a>.
                 During this internship, I worked on symplectic techniques for stochastic differential equations on symplectic manifolds
-                and sketched a proof of the ergodicity of the invariant measures of Langevin Diffusions on compact Lie groups under the assumption of Hörmander's condition.
+                and sketched a proof of the ergodicity of the invariant measures of Langevin Diffusions on compact Lie groups under the assumption of H&ouml;rmander's condition.
             </p>
             <figure>
-                <img src="src/img/plotb05.png" alt="SO3 Langevin"> <img src="src/img/plotb06.png" alt="SO3 Langevin">
-                <figcaption> Simulated Position and Momentum Langevin Equations on SO(3) using Störmer-Verlet and Symplectic Euler Methods.</figcaption>
+                <img alt="SO3 Langevin" src="src/img/plotb05.png"/> <img alt="SO3 Langevin" src="src/img/plotb06.png"/>
+                <figcaption> Simulated Position and Momentum Langevin Equations on SO(3) using St&ouml;rmer-Verlet and Symplectic Euler Methods.</figcaption>
             </figure>
         </article>
     </main>
     <footer>
-        <p>Updated on January 10, 2025</p>
+        <p>Last updated on Tue 6 Jan 2026, 06:18:25. by <a href="https://github.com/PommeBleue/pommebleue.github.io/8be6aea26b2f7c7ed865e053b7189761946b8372">8be6aea26b2f</a></p>
     </footer>
-
     <script src="scripts/canvas.js"></script>
 </body>
-
 </html>

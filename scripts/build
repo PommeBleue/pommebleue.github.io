@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+
+import datetime
+import os
+import logging
+import datetime
+import click
+
+from pathlib import Path
+from bs4 import BeautifulSoup
+from git.repo import Repo
+
+
+handler = logging.StreamHandler()
+
+path = Path(__file__).parent.parent.absolute()
+
+repo = Repo(path)
+tree = repo.heads.main.commit.tree
+
+GITHUB_REPO = 'https://github.com/PommeBleue/pommebleue.github.io'
+
+
+@click.command()
+@click.argument('ignored', nargs=-1)
+def build(ignored):
+	for name in os.listdir(path):
+		if name.endswith('.html'):
+			if name in ignored or name.rstrip('.html') in ignored:
+				logging.info(f'Ignored {name}')
+				continue
+
+			blob = tree[name]
+			commit = next(repo.iter_commits(paths=blob.path, max_count=1))
+			last_update_dt = datetime.datetime.fromtimestamp(commit.committed_date, datetime.UTC)
+			last_update_str = last_update_dt.strftime("%a %-d %b %Y, %H:%M:%S.")
+			logging.info(f'Updating footer of {name}, last update was {last_update_str}.')
+
+			with open(path / name, encoding='utf-8', mode='r') as f:
+				soup = BeautifulSoup(f, 'html.parser')
+
+			footer = soup.find('footer')
+
+			if footer and footer.p:
+				footer = footer.p
+				footer.string = ''
+				top_string = f'Last updated on {last_update_str} by '
+				a_tag = soup.new_tag('a', href=f'{GITHUB_REPO}/{commit.hexsha}', string=f'{commit.hexsha[:12]}')
+				footer.append(top_string)
+				footer.append(a_tag)
+
+				with open(path / name, encoding='utf-8', mode='w') as f:
+					raw_html = soup.encode(formatter="html").decode('utf-8')
+					f.write(raw_html)
+
+				logging.info(f'Updated footer of {name}.')
+
+				continue
+
+			logging.info(f'No footer found in {name}.')
+
+
+def config_logger():
+	datefmt = '%Y-%m-%d %H:%M:%S'
+	fmt = '%(asctime)s %(levelname)-5s %(message)s'
+	logging.basicConfig(format=fmt, level=logging.INFO, handlers=[handler], datefmt=datefmt)
+
+
+if __name__ == '__main__': 
+	config_logger()
+	build()

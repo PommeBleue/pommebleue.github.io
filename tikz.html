@@ -1,43 +1,41 @@
 <!DOCTYPE html>
+
 <html lang="en-us">
-
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> Amar Ahmane &bullet; PGF/TikZ figures </title>
-	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/fonts.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title> Amar Ahmane &bull; PGF/TikZ figures </title>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/fonts.css" rel="stylesheet"/>
 </head>
-
 <body>
-	<nav>
-		<ul class="menu">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="rapports.html">Reports</a></li>
-			<li><a href="ens.html">Teaching</a></li>
-			<li><a href="tikz.html">PGF/TikZ figures</a></li>
-		</ul>
-		<hr />
-	</nav>
-
-	<main>
-		<header>
-		</header>
-		<article>
-			<h2><em>PGF/TikZ figures</em></h2>
-            <p>
-                This page contains a collection of PGF/TikZ figures I’ve created, 
-				along with their corresponding code. While the content isn’t 
+<nav>
+<ul class="menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="rapports.html">Reports</a></li>
+<li><a href="ens.html">Teaching</a></li>
+<li><a href="tikz.html">PGF/TikZ figures</a></li>
+</ul>
+<hr/>
+</nav>
+<main>
+<header>
+</header>
+<article>
+<h2><em>PGF/TikZ figures</em></h2>
+<p>
+                This page contains a collection of PGF/TikZ figures I&rsquo;ve created, 
+				along with their corresponding code. While the content isn&rsquo;t 
 				particularly advanced, I find it useful to maintain a public 
-				archive of these figures. It’s a convenient reference for me and 
+				archive of these figures. It&rsquo;s a convenient reference for me and 
 				might also be helpful to others. Feel free to reuse the code as 
 				you like!
             </p>
-            <h4>Differentiable map between manifolds</h4>
-            <figure>
-				<img src="src/latex/figures/l3i-diff-function-manifolds/l3i-diff-function-manifolds.svg">
-			</figure>
-<!--		--><div class="highlight"><pre><code><span></span><span class="k">\documentclass</span><span class="nb">{</span>standalone<span class="nb">}</span>
+<h4>Differentiable map between manifolds</h4>
+<figure>
+<img src="src/latex/figures/l3i-diff-function-manifolds/l3i-diff-function-manifolds.svg"/>
+</figure>
+<!-- --><div class="highlight"><pre><code><span></span><span class="k">\documentclass</span><span class="nb">{</span>standalone<span class="nb">}</span>
 <!--		--><span class="k">\usepackage</span><span class="nb">{</span>mathtools,amssymb,amsthm,amsfonts,amscd,amsmath,mathrsfs<span class="nb">}</span>
 <!--		--><span class="k">\usepackage</span><span class="nb">[</span>svgnames,dvipsnames<span class="nb">]</span><span class="nb">{</span>xcolor<span class="nb">}</span>
 <!--		-->
@@ -61,7 +59,7 @@
 <!--		--><span class="k">\setlength</span><span class="k">\setlength</span><span class="nb">{</span>2mm<span class="nb">}</span>
 
 <!--		--><span class="k">\tikzset</span><span class="nb">{</span>state/.style=<span class="nb">{</span>circle,draw,minimum size=6ex<span class="nb">}</span>,
-<!--		-->arrow/.style=<span class="nb">{</span>-latex, shorten >=1ex, shorten <=1ex<span class="nb">}</span><span class="nb">}</span>			
+<!--		-->arrow/.style=<span class="nb">{</span>-latex, shorten &gt;=1ex, shorten &lt;=1ex<span class="nb">}</span><span class="nb">}</span>			
 
 <!--		--><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
 <!--		-->    <span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span><span class="nb">[</span>scale=.5<span class="nb">]</span>
@@ -101,7 +99,7 @@
 <!--		-->				coordinates <span class="nb">{</span>(q1) (q2) (q3) (q4)<span class="nb">}</span>;
 <!--		-->        <span class="k">\node</span> at (12.8, 1.1) <span class="nb">{</span><span class="s">$</span>V<span class="s">$</span><span class="nb">}</span>;
 <!--		-->
-<!--		-->        <span class="c">% Flèches</span>
+<!--		-->        <span class="c">% Fl&egrave;ches</span>
 <!--		-->        <span class="k">\draw</span><span class="nb">[</span>very thick, arrow, bend angle=10, bend left<span class="nb">]</span> 
 <!--		-->				(3.5,3.5) to (11.5,3.5);
 <!--		-->        <span class="k">\node</span> at (7.5,4) <span class="nb">[</span>above<span class="nb">]</span> <span class="nb">{</span><span class="s">$</span>f<span class="s">$</span><span class="nb">}</span>;
@@ -111,7 +109,7 @@
 <!--		-->        <span class="k">\node</span> at (15,-5.5) <span class="nb">[</span>right<span class="nb">]</span> <span class="nb">{</span><span class="s">$</span><span class="na">\psi</span><span class="s">$</span><span class="nb">}</span>;
 <!--		-->        <span class="k">\draw</span><span class="nb">[</span>very thick, arrow, bend angle=10, bend left<span class="nb">]</span> 
 <!--		-->				(2,-7) to (12.5,-7);
-<!--		-->        <span class="k">\node</span> at (7.25,-6.5) <span class="nb">[</span>above<span class="nb">]</span> <span class="nb">{</span><span class="s">$</span><span class="na">\psi</span><span class="na">\circ</span></span> f<span class="na">\circ</span><span class="na">\varphi</span>^<span class="nb">{</span>-1<span class="nb">}</span><span class="s">$</span><span class="nb">}</span>;
+<!--		-->        <span class="k">\node</span> at (7.25,-6.5) <span class="nb">[</span>above<span class="nb">]</span> <span class="nb">{</span><span class="s">$</span><span class="na">\psi</span><span class="na">\circ</span> f<span class="na">\circ</span><span class="na">\varphi</span>^<span class="nb">{</span>-1<span class="nb">}</span><span class="s">$</span><span class="nb">}</span>;
 <!--		-->
 <!--		-->        <span class="c">% Blob Rn</span>
 <!--		-->        <span class="k">\node</span> (q1) at (-1,-7) <span class="nb">{</span><span class="nb">}</span>;
@@ -120,7 +118,7 @@
 <!--		-->        <span class="k">\node</span> (q4) at (-1.3,-8.4) <span class="nb">{</span><span class="nb">}</span>;
 <!--		-->        <span class="k">\path</span><span class="nb">[</span>draw,thick,black<span class="nb">]</span> plot <span class="nb">[</span>smooth cycle,tension=1<span class="nb">]</span> 
 <!--		-->				coordinates <span class="nb">{</span>(q1) (q2) (q3) (q4)<span class="nb">}</span>;
-<!--		-->        <span class="k">\node</span> at (-1.3,-7) <span class="nb">[</span>left<span class="nb">]</span> <span class="nb">{</span><span class="s">$</span><span class="na">\R</span></span>^n<span class="s">$</span><span class="nb">}</span>;
+<!--		-->        <span class="k">\node</span> at (-1.3,-7) <span class="nb">[</span>left<span class="nb">]</span> <span class="nb">{</span><span class="s">$</span><span class="na">\R</span>^n<span class="s">$</span><span class="nb">}</span>;
 <!--		-->
 <!--		-->        <span class="c">% Blob Rp</span>
 <!--		-->        <span class="k">\node</span> (q1) at (14,-7) <span class="nb">{</span><span class="nb">}</span>;
@@ -130,20 +128,17 @@
 <!--		-->        <span class="k">\path</span><span class="nb">[</span>draw,thick,black<span class="nb">]</span> plot <span class="nb">[</span>smooth cycle,tension=1<span class="nb">]</span> 
 <!--		-->				coordinates <span class="nb">{</span>(q1) (q2) (q3) (q4)<span class="nb">}</span>;
 <!--		-->        <span class="k">\node</span> at (16,-7) <span class="nb">[</span>right<span class="nb">]</span> <span class="nb">{</span><span class="s">$</span><span class="na">\R</span>^p<span class="s">$</span><span class="nb">}</span>;
-<!--		-->	<span class= k  ">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
-<!--		--><span class= k  ">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+<!--		-->	<span "="" class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<!--		--><span "="" class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 <!--		--></code></pre></div>
-
-			<h4>Tangent plane animation</h4>
-			<figure>
-				<img src="src/img/tangent-plane-anim.gif">
-			</figure>
-		</article>
-	</main>
-
-	<footer>
-		<p>Updated on January 10, 2025</p>
-	</footer>
+<h4>Tangent plane animation</h4>
+<figure>
+<img src="src/img/tangent-plane-anim.gif"/>
+</figure>
+</article>
+</main>
+<footer>
+<p>Last updated on Fri 10 Jan 2025, 12:19:35. by <a href="https://github.com/PommeBleue/pommebleue.github.io/53e516b3b4fc350520d3d567c79aedcdb7d75d55">53e516b3b4fc</a></p>
+</footer>
 </body>
-
 </html>
