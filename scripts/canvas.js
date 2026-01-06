@@ -208,9 +208,7 @@ function simulate(){
 		}
 	}
 	print_system();
-	if (check.checked == true){
-		updatePhysics();
-	}
+	updatePhysics();
 	//console.log('earth', earth.x, earth.y, earth.z)
 	first = false;
 }
