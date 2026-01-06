@@ -1,5 +1,6 @@
 # Ignore editor directories and files
-.vscode/
+.vscode
+.idea
 
 # Ignore LaTeX auxiliary files
 *.aux
